@@ -9,4 +9,4 @@ export AWS_REGION=us-east-1
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=mysecretstring
-export URL=http://localhost:8100
+export URL=http://udagram-env.eba-ianwm43h.us-east-1.elasticbeanstalk.com/

@@ -1,11 +1,11 @@
 ## Pipeline process
 
 This app intergrate with CircleCI :
-- CircleCI trigger the event when code is change from github
+- CircleCI trigger the event when code is change from github 
 - Set up environment
 - Preparing environment variable
 - Install Nodejs
-- Setting up Elastic Beanstalk CLI
+- Setting up Elastic Beanstalk CLI, python3
 - Install AWS CLI
 - Configure AWS Acess Key ID
 - Checkout code
