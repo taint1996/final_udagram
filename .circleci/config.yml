@@ -9,12 +9,12 @@ jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
+      - image: "cimg/node:16.15"
       # - image: "cimg/base:stable"
     steps:
       # install node and checkout code
       - node/install:
-          node-version: "14.15"
+          node-version: "16.15"
       #   - checkout
       - eb/setup
       - aws-cli/setup

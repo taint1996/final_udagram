@@ -10,13 +10,6 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
 (async () => {
   dotenv.config();
-  
-  try {
-    await sequelize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
 
   await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.addModels(V0_USER_MODELS);
@@ -25,13 +18,13 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   console.log("Database Connected");
 
   const app = express();
-  const port = 8080;
+  const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
 
   // app.use(cors());
   // We set the CORS origin to * so that we don't need to
-  // worry about the complexities of CORS. 
+  // worry about the complexities of CORS.
   app.use(cors({
     "allowedHeaders": [
       'Origin', 'X-Requested-With',
